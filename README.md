@@ -1,3 +1,8 @@
+In order to push the jar file to our maven repository, I ran added a maven configuration file to
+`java/canonicalizer/dist` and from there, you can run
+```mvn deploy:deploy-file -Dfile=./json-canonicalizer.jar -DgroupId=com.github.cyberphone -DartifactId=json-canonicalizer -Dversion=1.0.0 -Dpackaging=jar -Durl="scp://maven@maven.oseberg.io/srv/volumes/maven/app/mavenrepo"```
+substituting the version that you tagged into the appropriate command line option.
+
 ![JCS](https://cyberphone.github.io/doc/security/jcs.svg)
 
 # JSON Canonicalization
